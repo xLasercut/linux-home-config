@@ -8,6 +8,9 @@ chmod 644 ~/.ssh/*.pub
 # copy zsh config
 cp ./.zshrc ~
 
+# install antigen
+git clone https://github.com/zsh-users/antigen.git ~/antigen
+
 # copy gitconfig
 cp ./.gitconfig ~
 
