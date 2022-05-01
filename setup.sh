@@ -7,3 +7,6 @@ chmod 644 ~/.ssh/*.pub
 
 # copy zsh config
 cp ./.zshrc ~
+
+# copy gitconfig
+cp ./.gitconfig ~
