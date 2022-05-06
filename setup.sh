@@ -43,7 +43,7 @@ fi
 if [[ $ADD_LOCALS = 1 ]]
 then
   _display_message "ADDING .LOCALS"
-  cp -r ./.locals ~
+  cp -r ./.local ~
 fi
 
 # add .themes
