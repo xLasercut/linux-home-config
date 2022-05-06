@@ -35,5 +35,27 @@ fi
 if [[ $ADD_VM_FIXES = 1 ]]
 then
   _display_message "ADDING VM FIXES"
-  sudo cp -r ./vm/* ~
+  cp -r ./vm/* ~
+fi
+
+
+# add .locals
+if [[ $ADD_LOCALS = 1 ]]
+then
+  _display_message "ADDING .LOCALS"
+  cp -r ./.locals ~
+fi
+
+# add .themes
+if [[ $ADD_THEMES = 1 ]]
+then
+  _display_message "ADDING THEMES"
+  cp -r ./.themes ~
+fi
+
+# add fonts
+if [[ $ADD_FONTS = 1 ]]
+then
+  _display_message "ADDING FONTS"
+  cp -r ./.fonts ~
 fi
