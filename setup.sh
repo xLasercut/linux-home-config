@@ -22,7 +22,14 @@ git clone https://github.com/zsh-users/antigen.git ~/antigen
 
 # copy gitconfig
 _display_message "GIT CONFIG"
-cp ./.gitconfig ~
+git config --global difftool.prompt "false"
+git config --global core.editor "vim"
+git config --global credential.helper "store"
+read -r -p "git user.name: " git_username
+git config --global user.name "$git_username"
+read -r -p "git user.email: " git_usermail
+git config --global user.email "$git_usermail"
+
 
 # add executables
 if [[ $ADD_EXECUTABLE = 1 ]]
