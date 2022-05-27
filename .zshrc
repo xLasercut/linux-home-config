@@ -20,6 +20,7 @@ antigen bundle mattberther/zsh-pyenv
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
 
 antigen apply
