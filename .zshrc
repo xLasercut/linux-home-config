@@ -22,10 +22,10 @@ antigen bundle aws
 antigen bundle rbenv
 
 # third party plugins
-antigen bundle ecortinas/zsh-rbenv
+antigen bundle ecortinas/zsh-rbenv@main
 antigen bundle mattberther/zsh-pyenv
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle hadenlabs/zsh-tfenv
+antigen bundle CDA0/zsh-tfenv
 antigen bundle lukechilds/zsh-nvm
 antigen bundle CDA0/zsh-goenv
 
