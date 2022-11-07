@@ -65,7 +65,7 @@ if [[ $ADD_FONTS = 1 ]]
 then
   _display_message "ADDING FONTS"
   mkdir -p ~/.fonts
-  popd ~/.fonts
+  pushd ~/.fonts
   curl -fLo "JetBrains Mono Medium Nerd Font Complete Mono.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/JetBrainsMono/Ligatures/Medium/complete/JetBrains%20Mono%20Medium%20Nerd%20Font%20Complete%20Mono.ttf
   curl -fLo "JetBrainsMono-Bold.ttf" https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/ttf/JetBrainsMono-Bold.ttf
   curl -fLo "JetBrainsMono-BoldItalic.ttf" https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/ttf/JetBrainsMono-BoldItalic.ttf
@@ -83,5 +83,5 @@ then
   curl -fLo "JetBrainsMono-SemiBoldItalic.ttf" https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/ttf/JetBrainsMono-SemiBoldItalic.ttf
   curl -fLo "JetBrainsMono-Thin.ttf" https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/ttf/JetBrainsMono-Thin.ttf
   curl -fLo "JetBrainsMono-ThinItalic.ttf" https://github.com/JetBrains/JetBrainsMono/blob/master/fonts/ttf/JetBrainsMono-ThinItalic.ttf
-  pushd
+  popd
 fi
