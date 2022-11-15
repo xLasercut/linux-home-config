@@ -5,7 +5,7 @@ function _setup_vm_fixes() {
 
   echo "Copying ${VM_FIXES_DIR} to ~"
 
-  cp -r "${VM_FIXES_DIR}/*" ~
+  cp -r "${VM_FIXES_DIR}/." ~/
 
   echo "Complete"
 
