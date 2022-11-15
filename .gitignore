@@ -1,2 +1,7 @@
 .idea
 .vscode
+
+# update files
+tmp
+*.tar.xz
+nordic-git
