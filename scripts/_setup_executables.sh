@@ -5,7 +5,7 @@ function _setup_executables() {
 
   echo "Copying executables from ${EXECUTABLES_DIR} to /usr/local/bin"
 
-  sudo cp "${EXECUTABLES_DIR}/*" /usr/local/bin
+  sudo cp -r "${EXECUTABLES_DIR}/." /usr/local/bin/
 
   echo "Complete"
 }
