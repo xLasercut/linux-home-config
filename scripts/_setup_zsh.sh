@@ -8,5 +8,8 @@ function _setup_zsh() {
 
   echo "antigen apply" >> ~/.zshrc
 
+  echo "Change shell to zsh"
+  chsh -s /bin/zsh
+
   echo "Complete"
 }
