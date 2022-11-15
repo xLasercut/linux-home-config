@@ -32,4 +32,3 @@ antigen bundle CDA0/zsh-goenv
 # aliases
 alias assume-role='function(){ eval $(__assume_role $@); }'
 
-antigen apply
