@@ -16,7 +16,7 @@ function _combined_setup() {
 
   case $command in
   "base")
-    _setup_ssh
+    _setup_ssh_files
     _setup_git
     _setup_antigen
     _setup_zsh

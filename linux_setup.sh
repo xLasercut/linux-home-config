@@ -33,7 +33,7 @@ function linux_setup() {
   cd "$REPO_ROOT" || return 1
 
   case $command in
-  "ssh") _setup_ssh ;;
+  "ssh") _setup_ssh "${@:2}" ;;
   "antigen") _setup_antigen ;;
   "executables") _setup_executables ;;
   "fonts") _setup_fonts ;;
