@@ -12,5 +12,9 @@ function _setup_ssh() {
   echo "Apply 644 to ~/.ssh/*.pub"
   chmod 644 ~/.ssh/*.pub
 
+  echo "starting sshd"
+  sudo systemctl start sshd.service
+  sudo systemctl enable sshd.service
+
   echo "Complete"
 }
