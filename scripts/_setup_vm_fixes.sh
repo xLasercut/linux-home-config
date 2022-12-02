@@ -3,9 +3,10 @@
 function _setup_vm_fixes() {
   _display_message "VM FIXES"
 
-  echo "Copying ${VM_FIXES_DIR} to ~"
+  echo "Copying ${VM_FIXES_DIR} to ~ and /etc"
 
-  cp -r "${VM_FIXES_DIR}/." ~/
+  cp -r "${VM_FIXES_DIR}/home/." ~/
+  sudo cp -r "${VM_FIXES_DIR}/etc/." /etc/
 
   echo "Complete"
 
