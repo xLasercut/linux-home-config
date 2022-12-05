@@ -18,6 +18,7 @@ function _linux_setup_help() {
   echo "  fonts       - install fonts"
   echo "  git         - setup git"
   echo "  locals      - install .local files"
+  echo "  configs     - install .config files"
   echo "  themes      - install themes"
   echo "  vmfix       - install fixes for vmware"
   echo "  zsh         - setup zsh"
@@ -39,6 +40,7 @@ function linux_setup() {
   "fonts") _setup_fonts ;;
   "git") _setup_git ;;
   "locals") _setup_locals ;;
+  "configs") _setup_configs ;;
   "themes") _setup_themes ;;
   "vmfix") _setup_vm_fixes ;;
   "zsh") _setup_zsh ;;
