@@ -7,6 +7,7 @@ function _update_help() {
   echo "commands:"
   echo "  help      - this help screen"
   echo "  fonts     - update fonts to latest version"
+  echo "  themes    - update themes to latest version"
   echo
 }
 
