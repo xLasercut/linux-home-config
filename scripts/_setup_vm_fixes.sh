@@ -12,8 +12,7 @@ function _setup_vm_fixes() {
 
   echo "Adding vmware module fixes"
 
-  sudo sed -i -e '/MODULES=/ s/=.*/=(vsock vmw_vsock_vmci_transport vmw_balloon vmw_vmci vmwgfx)/' /etc/mkinitcpio.conf
-  sudo mkinitcpio -P
+  sudo dracut-rebuild
 
   echo "Complete"
 
