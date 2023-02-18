@@ -46,7 +46,6 @@ function linux_setup() {
   "zsh") _setup_zsh ;;
   "update") _update "${@:2}" ;;
   "setup") _combined_setup "${@:2}" ;;
-  "aws") _setup_aws ;;
   *) _linux_setup_help ;;
   esac
 

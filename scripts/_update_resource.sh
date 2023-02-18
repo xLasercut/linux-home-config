@@ -5,9 +5,10 @@ function _update_help() {
   echo "linux_setup update <command>"
   echo
   echo "commands:"
-  echo "  help      - this help screen"
-  echo "  fonts     - update fonts to latest version"
-  echo "  themes    - update themes to latest version"
+  echo "  help        - this help screen"
+  echo "  fonts       - update fonts to latest version"
+  echo "  themes      - update themes to latest version"
+  echo "  executables - update executables to latest version"
   echo
 }
 
@@ -17,8 +18,25 @@ function _update() {
   case $command in
   "fonts") _update_fonts ;;
   "themes") _update_themes ;;
+  "executables") _update_executables ;;
   *) _update_help ;;
   esac
+}
+
+function _update_executables() {
+  local latest_release
+
+  echo "Fetching latest release for: xLasercut/aws-assume-role"
+
+  latest_release=$(curl -s "https://api.github.com/repos/xLasercut/aws-assume-role/releases/latest" | jq -r .tag_name)
+
+  echo "Latest release is: ${latest_release}"
+
+  echo "Updating aws-assume-role"
+
+  wget -q "https://github.com/xLasercut/aws-assume-role/releases/download/${latest_release}/assume-role-linux" -O "${EXECUTABLES_DIR}/__assume_role"
+
+  chmod +x "${EXECUTABLES_DIR}/__assume_role"
 }
 
 function _update_nordic_theme() {
