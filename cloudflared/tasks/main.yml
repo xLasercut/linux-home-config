@@ -1,0 +1,21 @@
+- name: Get distribution
+  command: lsb_release -sc
+  register: distribution
+
+- name: Download gpg key
+  get_url:
+    url: https://pkg.cloudflare.com/cloudflare-main.gpg
+    dest: /usr/share/keyrings/cloudflare.gpg
+    checksum: sha256:713b4a66eafb4ee8c142805fcd2c62b6bce737fc41594257a1faf6da8c649242
+
+- name: Add repository
+  apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/cloudflare.gpg] https://pkg.cloudflare.com/cloudflared {{distribution.stdout}} main
+    state: present
+
+- name: Install cloudflared
+  apt:
+    update_cache: yes
+    name:
+      - cloudflared
+    state: present
